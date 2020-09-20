@@ -21,8 +21,8 @@ allprojects {
     apply plugin: 'idea'
     apply plugin: 'maven-publish'
 
-    sourceCompatibility = 1.7
-    targetCompatibility = 1.7
+    sourceCompatibility = 11
+    targetCompatibility = 11
 }
 
 task sourcesJar(type: Jar, dependsOn:classes) {
@@ -78,6 +78,10 @@ bintray {
     }
 }
 
-task wrapper(type: Wrapper) {
-  gradleVersion = '2.4'
+//task wrapper(type: Wrapper) {
+//  gradleVersion = '2.4'
+//}
+
+wrapper {
+    gradleVersion = '6.6.1'
 }
